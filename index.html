@@ -1,43 +1,397 @@
 <!DOCTYPE html>
-<!--Doctype indica que el tipo de documento es HTML-->
-<!--Entregable 2-->
-<!--Este desarrollo web es diseñado por Lia Alvarez y Camila -->
+
+<!-- Doctype indica que el tipo de documento es HTML -->
+
+<!-- Entregable 2 -->
+
+<!-- Este desarrollo web es diseñado por Lia y Camila -->
 
 <html lang="es">
-    <!--Lang esta indicado que es español-->
+
+<!-- Lang está indicando que es español -->
 
 <head>
-    <!--Dentro del Head van las configuraciones de la app o sitio web-->
+
+    <!-- Dentro del Head van las configuraciones de la app o sitio web -->
 
     <meta charset="UTF-8">
 
-    <!--esta meta dato permite todos los caracteres-->
+    <!-- Este meta dato permite todos los caracteres -->
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--E1 meta dato de viewport es para que se aadapte a cualquier pantalla-->
+
+    <!-- El meta dato de viewport es para que se adapte a cualquier pantalla -->
+
+    <meta name="autor" content="Lia Valentina">
 
     <title>SUPPLYMATCH</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <!-- El título va como aparece en la web -->
+
+    <link rel="stylesheet" href="./css/styles.css">
+
+    <!-- link rel enlaza con la carpeta y el archivo del CSS -->
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
 </head>
+
 <body>
+
     <header class="header">
-    <div class="container header-inner">
-      <a class="logo" href="#">
-        <img src="img2/logo.jpeg" alt="Logo Fundación Pies con Cora" height="70" />
-      </a>
-      <nav class="main-nav" id="mainNav">
-        <ul>
-           <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Quiénes somos</a></li>
-          <li><a href="#proveedores">Proveedores</a></li>
-          <li><a href="#empresas">Empresas</a></li>
-          <li><a href="#servicios">Servicios</a></li>
-          <li><a class="btn-dona" href="#contacto
-        </ul>
-      </nav>
-      <button id="menuToggle" class="menu-toggle">☰</button>
-    </div>
-  </header>
-</head>
+
+        <div class="container header-inner">
+
+            <a class="logo" href="#">
+
+                <img src="img/logo.jpg" alt="Logo SupplyMatch" height="70">
+
+            </a>
+
+            <nav class="main-nav" id="mainNav">
+
+                <ul>
+
+                    <li>
+                        <a href="#inicio">Inicio</a>
+                    </li>
+
+                    <li>
+                        <a href="#nosotros">Quiénes somos</a>
+                    </li>
+
+                    <li>
+                        <a href="#proveedores">Proveedores</a>
+                    </li>
+
+                    <li>
+                        <a href="#empresas">Empresas</a>
+                    </li>
+
+                    <li>
+                        <a href="#servicios">Servicios</a>
+                    </li>
+
+                    <li>
+                        <a href="#categorias">Categorías</a>
+                    </li>
+
+                    <li>
+                        <a class="btn-shop" href="#contacto">Contacto</a>
+                    </li>
+
+                </ul>
+
+            </nav>
+
+            <button id="menuToggle" class="menu-toggle">☰</button>
+
+        </div>
+
+    </header>
+
+
+    <!-- AQUÍ INICIA EL MAIN -->
+
+    <main>
+
+        <!-- HERO con video SI NO QUIERO VIDEO, pendiente cambiarlo -->
+
+        <section id="inicio" class="hero video-hero">
+
+            <video class="hero-video" id="heroVideo" autoplay loop muted playsinline>
+
+                <source src="img2/logo.jpeg" type="video/mp4">
+
+            </video>
+
+            <div class="hero-overlay"></div>
+
+
+            <!-- Estos son los botones que están dentro del video -->
+
+            <div class="hero-content container">
+
+                <div class="hero-actions">
+
+                    <a class="btn primary"
+                        href="https://forms.gle/9bGxM41iZmSR8NVj6">
+                        Asesorías
+                    </a>
+
+                    <a class="btn outline" href="#empresas">
+                        Empresas
+                    </a>
+
+                </div>
+
+
+                <!-- Esta tarjeta es para colocar estadísticas
+                y la clase stat es para colocar datos -->
+
+                <div class="stats-grid">
+
+                    <div class="stat">
+
+                        <div class="stat-number">+224,000</div>
+
+                        <div class="stat-label">
+                            Empresas conectadas
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">+12,000</div>
+
+                        <div class="stat-label">
+                            Proveedores registrados
+                        </div>
+
+                    </div>
+
+
+                    <div class="stat">
+
+                        <div class="stat-number">+300</div>
+
+                        <div class="stat-label">
+                            Servicios disponibles
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- AQUÍ HAY TRES TARJETAS PARA DESTACAR
+        PROYECTOS, VENTAS, SERVICIOS, ETC. -->
+
+        <section id="nosotros" class="projects container">
+
+            <h2>¿Quiénes Somos?</h2>
+
+            <p class="lead">
+                En SupplyMatch somos una plataforma creada para conectar
+                empresas con proveedores de manera rápida, segura y eficiente.
+            </p>
+
+
+            <div class="project-cards">
+
+
+                <article class="card">
+
+                    <div class="card-img" id="antioquia-caucasia"></div>
+
+                    <div class="card-body">
+
+                        <h3>¿Qué es SupplyMatch?</h3>
+
+                        <p>
+                            Somos una plataforma que facilita la búsqueda de
+                            proveedores y servicios de acuerdo con las
+                            necesidades de cada empresa.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-img" id="guajira"></div>
+
+                    <div class="card-body">
+
+                        <h3>Nuestro objetivo</h3>
+
+                        <p>
+                            Facilitar la conexión entre empresas y proveedores,
+                            reduciendo el tiempo de búsqueda y mejorando la
+                            confianza en el proceso.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card">
+
+                    <div class="card-img" id="cordoba"></div>
+
+                    <div class="card-body">
+
+                        <h3>¿Qué ofrecemos?</h3>
+
+                        <p>
+                            Una plataforma donde las empresas pueden encontrar
+                            proveedores, servicios y opciones de acuerdo con
+                            sus necesidades.
+                        </p>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- SECCIÓN DE PROVEEDORES -->
+
+        <section id="proveedores">
+
+        </section>
+
+
+        <!-- SECCIÓN DE EMPRESAS -->
+
+        <section id="empresas">
+
+        </section>
+
+
+        <!-- SECCIÓN DE SERVICIOS -->
+
+        <section id="servicios">
+
+        </section>
+
+
+        <!-- SECCIÓN DE CATEGORÍAS -->
+
+        <section id="categorias">
+
+        </section>
+
+
+        <!-- NEWSLETTER -->
+
+        <section id="contacto" class="newsletter">
+
+            <div class="container newsletter-inner">
+
+                <div>
+
+                    <h2>¡No te pierdas lo último!</h2>
+
+                    <p>
+                        Suscríbete para recibir noticias e historias.
+                    </p>
+
+                </div>
+
+
+                <form id="subscribeForm"
+                    class="subscribe-form"
+                    novalidate>
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Tu correo electrónico"
+                        required
+                    >
+
+                    <button class="btn primary" type="submit">
+                        Suscribirme
+                    </button>
+
+                </form>
+
+
+                <div id="formMessage" class="form-message"></div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- AQUÍ INICIA EL FOOTER -->
+
+    <footer>
+
+        <div class="footer-social">
+
+            <div class="container social-icons">
+
+
+                <a href="https://www.facebook.com/"
+                    aria-label="Facebook">
+
+                    <i class="fa-brands fa-facebook-f"></i>
+
+                </a>
+
+
+                <a href="https://www.instagram.com/"
+                    aria-label="Instagram">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+
+                <a href="https://www.youtube.com/"
+                    aria-label="YouTube">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+
+                <a href="https://www.linkedin.com/"
+                    aria-label="LinkedIn">
+
+                    <i class="fa-brands fa-linkedin-in"></i>
+
+                </a>
+
+
+                <a href="https://x.com/?lang=es"
+                    aria-label="X (Twitter)">
+
+                    <i class="fa-brands fa-x-twitter"></i>
+
+                </a>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <div class="container">
+
+                &copy;
+
+                <span id="anio"></span>
+
+                SUPPLYMATCH
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
 </body>
 
+</html>

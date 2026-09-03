@@ -1,58 +1,479 @@
-#
 /* Reset y Fuentes */
-{
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-font-family: 'Arial', sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
-header {
-background: #222;
-color: #fff;
-padding: 1rem;
-position: fixed;
-width: 100%;
-z-index: 1000;
+
+html {
+    scroll-behavior: smooth;
 }
+
+body {
+    background-color: #ffffff;
+    color: #111111;
+}
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+
+.header {
+    background: hsla(197, 54%, 35%, 0.939);
+    color: #dce178;
+    padding: 1rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+/* =====================================================
+   LOGO
+   ===================================================== */
+
 /* Estilos para el contenedor del logo y el título */
-  .logo {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  }
-  
-  .logo img {
-  border-radius: 100px;
-  width: 150px;
-  height: 90px;
-  }
-  
-  .header h1 {
-  margin: 0;
-  }
-  
-  /* BOTONES DE INICIO Y BARRA DE NAVEGACIÓN */
-  .main-nav ul {
-  display: flex;
-  list-style: none; /* Quita los puntos (viñetas) de la lista. */
-  gap: 15px; /*Espacio entre las secciones del menú nav */
-  }
-  
-    . main nav-button {
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.logo img {
+    border-radius: 100px;
+    width: 100px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.header h1 {
+    margin: 0;
+}
+
+
+/* =====================================================
+   BOTONES DE INICIO Y BARRA DE NAVEGACIÓN
+   ===================================================== */
+
+.main-nav {
+    margin-left: auto;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li a {
+    color: #111111;
+    text-decoration: none;
+}
+
+
+/* =====================================================
+   BOTÓN CONTACTO
+   ===================================================== */
+
+.btn-dona,
+.btn-shop {
+    background-color: #9AAF94;
+    color: #333333 !important;
+    padding: 10px 20px;
+    margin-left: 15px;
+    border-radius: 10px;
+    border: 3px solid white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-dona:hover,
+.btn-shop:hover {
+    background-color: #7F966F;
+    transform: scale(1.05);
+}
+
+
+/* =====================================================
+   BOTÓN MENÚ
+   ===================================================== */
+
+.menu-toggle {
+    display: none;
+    border: none;
+    background: transparent;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+
+/* =====================================================
+   HERO
+   ===================================================== */
+
+.hero {
+    position: relative;
+    width: 100%;
+    min-height: 450px;
+    overflow: hidden;
+}
+
+.video-hero {
+    background-color: #ffffff;
+}
+
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.15);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* =====================================================
+   BOTONES DEL HERO
+   ===================================================== */
+
+.hero-actions {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn.primary {
     background-color: #9AAF94;
     color: #333333;
-  padding: 10px 20px;
-  margin-left: 15px;
-  border-radius: 10px;
-  border: 3px solid white;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  }
-  
-    .nav-button:hover {
+    border: 2px solid white;
+}
+
+.btn.primary:hover {
     background-color: #7F966F;
-  transform: scale(1.05);
-  }
+}
+
+.btn.outline {
+    background-color: transparent;
+    color: #333333;
+    border: 2px solid #9AAF94;
+}
+
+.btn.outline:hover {
+    background-color: #9AAF94;
+}
 
 
+/* =====================================================
+   ESTADÍSTICAS
+   ===================================================== */
+
+.stats-grid {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.stat {
+    background-color: rgba(255, 255, 255, 0.90);
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.stat-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #087f9f;
+}
+
+.stat-label {
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+
+/* =====================================================
+   CONTENEDOR GENERAL
+   ===================================================== */
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+/* =====================================================
+   ¿QUIÉNES SOMOS?
+   ===================================================== */
+
+.projects {
+    padding-top: 55px;
+    padding-bottom: 60px;
+}
+
+.projects h2 {
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+
+.lead {
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+
+/* =====================================================
+   TRES TARJETAS
+   ===================================================== */
+
+.project-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+    min-height: 230px;
+}
+
+.card-img {
+    height: 100px;
+    background-color: #f2f2f2;
+}
+
+.card-body {
+    padding: 22px;
+}
+
+.card-body h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333333;
+}
+
+
+/* =====================================================
+   NEWSLETTER
+   ===================================================== */
+
+.newsletter {
+    width: 100%;
+    background-color: #f4f4f4;
+    padding: 40px 0;
+}
+
+.newsletter-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.newsletter h2 {
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+.newsletter p {
+    color: #555555;
+}
+
+
+/* =====================================================
+   FORMULARIO
+   ===================================================== */
+
+.subscribe-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.subscribe-form input {
+    width: 260px;
+    padding: 12px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.subscribe-form input:focus {
+    outline: none;
+    border-color: #087f9f;
+}
+
+.form-message {
+    font-size: 14px;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+
+footer {
+    width: 100%;
+    display: block;
+}
+
+
+/* =====================================================
+   REDES SOCIALES
+   ===================================================== */
+
+.footer-social {
+    width: 100%;
+    background-color: #E8A0BF;
+    padding: 25px 0;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #9AAF94;
+}
+
+
+/* =====================================================
+   PARTE INFERIOR DEL FOOTER
+   ===================================================== */
+
+.footer-bottom {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+   ===================================================== */
+
+@media (max-width: 900px) {
+
+    .main-nav ul {
+        gap: 10px;
+    }
+
+    .main-nav ul li a {
+        font-size: 14px;
+    }
+
+    .project-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .header-inner {
+        justify-content: space-between;
+    }
+
+    .logo img {
+        width: 70px;
+        height: 65px;
+    }
+
+    .main-nav {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: block;
+        color: white;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .subscribe-form {
+        flex-direction: column;
+    }
+
+    .subscribe-form input {
+        width: 100%;
+    }
+
+}
