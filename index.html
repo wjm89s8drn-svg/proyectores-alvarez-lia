@@ -12,29 +12,30 @@
     <!--esta meta dato permite todos los caracteres-->
     <meta name="viewport" content="width=device-width, initial-scale.0">
     <!--E1 meta dato de viewport es para que se adapte a cualquier pantalla-->
-    <meta name="autor" content="Lia Valentina">
+    <meta name="autor" content="Lia">
     <title> SUPPLYMATCH</title>
     <!--El titulo va como aparece en la web-->
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/style.css">
     <!--link rel enlaza con la carpeta y el archivo del css-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     
     <header class="header">
     <div class="container header-inner">
       <a class="logo" href="#">
-        <img src="img/logo.jpg" alt="Logo SupplyMatch" height="70" />
+        <img src="img2/logo.jpeg" alt="Logo SupplyMatch"/>
       </a>
       <nav class="main-nav" id="mainNav">
         <ul>
-          <li><a href="#inicio">Inicio</a></li>
-          <li><a href="#nosotros">Quiénes somos</a></li>
+          <li><a href="#Inicio">Inicio</a></li>
+          <li><a href="#proyectos">Proyectos</a></li>
            <li><a href="#poroveedores">Proveedores</a></li>
            <li><a href="#empresas">Empresas</a></li>
              <li><a href="#servicios">Servicios</a></li>
              <li><a href="#categorias"> Categorias</a></li>
-          <li><a class="btn-shop" href="donar">Contacto</a><li>
+          <li><a href="#contacto">Contacto</a></li>
 
         </ul>
       </nav>
@@ -43,40 +44,72 @@
   </header>
 
   <!-- AQUÍ INICIA EL MAIN   -->
-  <main>
+  <main id="Inicio">
     <!-- HERO con video  SI NO QUIERO VIDEO,pendiente cambiarlo-->
-    <section class="hero video-hero">
-      <video class="hero-video" id="heroVideo" autoplay loop playsinline>
+    <!--section class="hero video-hero"-->
+      <!--video class="hero-video" id="heroVideo" autoplay loop playsinline>
         <source src="img/Video_pies_con_cora.mp4" type="video/mp4" />
       </video>
-      <div class="hero-overlay"></div>
+      <div class="hero-overlay"></div-->
 
-<! --Estos son los botones que estan dentro del video 
+<!--Estos son los botones que estan dentro del video--> 
 
-      <div class="hero-content container">
+      
+    <!--/section--> <!--Fin hero y cierra las estadísticas y todo-->
+
+     <!-- CARRUSEL DE IMÁGENES / LANZAMIENTOS / PRODUCTOS ETC -->
+    <section id="lanzamientos" class="carousel-section container">
+      <h2>Encuentra lo que necesitas</h2>
+
+
+
+      <div class="carousel" id="carousel">
+        <div class="carousel-track" id="carouselTrack">
+          <div class="carousel-slide">
+            <img src="img2/nuestro-objetivo.jpg" alt="Consultorías TechIY">
+            <p class="carousel-caption">Confianza</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="img2/que-es-supply.jpg" alt="Talleres TechIY">
+            <p class="carousel-caption">Conexión</p>
+          </div>
+          <div class="carousel-slide">
+            <img src="img2/que-ofrecemos.jpg" alt="Asesorías TechIY">
+            <p class="carousel-caption">Solucion</p>
+          </div>
+        </div>
+
+        <div class="hero-content container">
         <div class="hero-actions">
           <a class="btn primary" href="https://forms.gle/9bGxM41iZmSR8NVj6">Asesorias</a>
-          <a class="btn outline" href="#voluntariado">Emopresas</a>
+          <a class="btn outline" href="#voluntariado">Empresas</a>
         </div>
 
 <!--Esta tarjeta es para colocar estadisticas y la clase de stat es para colocar datos-->
 
         <div class="stats-grid">
           <div class="stat">
-            <div class="stat-number">+224.000</div>
-            <div class="stat-label">Niños beneficiados</div>
+            <div class="stat-number">Proveedores</div>
+            <div class="stat-label">Encuentra proveedores</div>
           </div>
           <div class="stat">
-            <div class="stat-number">+12.000</div>
-            <div class="stat-label">Docentes capacitados</div>
+            <div class="stat-number">Empresas</div>
+            <div class="stat-label">Conecta con confianza</div>
           </div>
           <div class="stat">
-            <div class="stat-number">+300</div>
-            <div class="stat-label">Colegios acompañados</div>
+            <div class="stat-number">Servicios</div>
+            <div class="stat-label">Explorar servicioss</div>
           </div>
         </div>
       </div>
-    </section> <!--Fin hero y cierra las estadísticas y todo-->
+
+        <button class="carousel-btn prev" id="carouselPrev" aria-label="Anterior">&#10094;</button>
+        <button class="carousel-btn next" id="carouselNext" aria-label="Siguiente">&#10095;</button>
+
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </section>
+    <!-- FIN CARRUSEL -->
 
     <! --AQUI HAY TRES TARJETAS PARA DESCATACAR PROYECTOS ,VENTAS,SERVICIOS, ETC-->
 
@@ -102,7 +135,7 @@
           <div class="card-body">
             <h3>Nuestro objetivo</h3>
             <p>
-              Facilitar la conecion entre empresas y proveedores, reduciendo el tiempo de busqueda y 
+              Facilitar la conexion entre empresas y proveedores, reduciendo el tiempo de busqueda y 
               mejorando la confianza en el proceso.
             </p>
           </div>
@@ -137,7 +170,24 @@
   </main>
 
   <!--AQUI INICIA EL FOOTER-->
-  <footer>
+  <footer id="Contacto">
+
+    <div class="footer-grid">
+      <div class="Contacto">
+        <h3>Contacto</h3>
+        <address>
+          <p>
+            <i class="fa fa-map-marker-alt"></i>
+            <a href="https://maps.app.goo.gl/Q1XPT9A7XxzYzg396" target="_blank" rel="noreferrer noopener">
+            <span style="color: #000000; font-weight: bold">Ubicación: </span> Av. Mazatlan 91, Colonia Condesa, Cuauhtémoc, 06140 Ciudad de México, CDMX
+            </a>
+          </p>
+          <p>
+            <i class="fa fa-phone"></i>
+            <span style="color: #000000; font-weight: bold">Teléfono: </span> <a href="tel:+5519224580"> 55 1922 4580</a>
+          </p>
+        </address>
+      </div>
 
     <div class="footer-social">
      <div class="container social-icons">
@@ -173,6 +223,6 @@
     
   </footer>
 
+<script src="JS/script.js" ></script>
 </body>
 </html>
-   
